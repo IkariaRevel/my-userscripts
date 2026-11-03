@@ -6,8 +6,8 @@
 // @match        *://*.youtube.com/*
 // @run-at       document-start
 // @grant        GM_addStyle
-// @updateURL    https://raw.githubusercontent.com/username/my-userscripts/main/yt-tooltips.user.js
-// @downloadURL  https://raw.githubusercontent.com/username/my-userscripts/main/yt-tooltips.user.js
+// @updateURL    https://github.com/IkariaRevel/my-userscripts/raw/refs/heads/main/yt-color-change.user.js
+// @downloadURL  https://github.com/IkariaRevel/my-userscripts/raw/refs/heads/main/yt-color-change.user.js
 // ==/UserScript==
 
 (function() {
