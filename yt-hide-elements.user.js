@@ -8,8 +8,8 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_registerMenuCommand
-// @updateURL    https://raw.githubusercontent.com/username/my-userscripts/main/yt-tooltips.user.js
-// @downloadURL  https://raw.githubusercontent.com/username/my-userscripts/main/yt-tooltips.user.js
+// @updateURL    https://github.com/IkariaRevel/my-userscripts/raw/refs/heads/main/yt-hide-elements.user.js
+// @downloadURL  https://github.com/IkariaRevel/my-userscripts/raw/refs/heads/main/yt-hide-elements.user.js
 // ==/UserScript==
 
 (function() {
