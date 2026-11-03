@@ -4,8 +4,8 @@
 // @description  Останавливает автоподгрузку видео при скролле главной страницы YouTube
 // @match        https://www.youtube.com/*
 // @run-at       document-start
-// @updateURL    https://raw.githubusercontent.com/username/my-userscripts/main/yt-tooltips.user.js
-// @downloadURL  https://raw.githubusercontent.com/username/my-userscripts/main/yt-tooltips.user.js
+// @updateURL    https://github.com/IkariaRevel/my-userscripts/raw/refs/heads/main/yt-disable-inf-feed.user.js
+// @downloadURL  https://github.com/IkariaRevel/my-userscripts/raw/refs/heads/main/yt-disable-inf-feed.user.js
 // ==/UserScript==
 
 new MutationObserver(() => {
