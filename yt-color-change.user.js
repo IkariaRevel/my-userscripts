@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         YouTube изменение цветов
+// @name         YouTube: изменение цветов
 // @namespace    local.yt.theme
 // @version      2.0
 // @description  Прямая стилизация DOM YouTube без лагов
