@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         YouTube Главная страница — расстояние между превью
+// @name         YouTube: главная страница — расстояние между превью
 // @namespace    local.yt.grid
 // @version      1.0
 // @description  Настройка расстояния между миниатюрами на главной странице YouTube
