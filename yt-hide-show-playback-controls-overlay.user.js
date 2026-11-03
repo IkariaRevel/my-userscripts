@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         YouTube Скрыть-показать управление воспроизведением
+// @name         YouTube: скрыть-показать управление воспроизведением
 // @namespace    local.yt.player.toggle
 // @version      1.0
 // @description  Кнопка в правом верхнем углу плеера для скрытия и показа оверлея
