@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         YouTube: Скрыть элементы интерфейса (выбор в настройках скрипта)
+// @name         YouTube: скрыть элементы интерфейса (выбор в настройках скрипта)
 // @namespace    local.yt.hider
-// @version      1.1
+// @version      1.11
 // @description  Модульное скрытие элементов YouTube через переключение data-атрибутов
 // @match        *://*.youtube.com/*
 // @run-at       document-start
@@ -57,8 +57,11 @@
             id: 'channel-avatars',
             title: 'Аватары каналов и авторов (везде, включая кнопку профиля — закомментировано по умолчанию)',
             selector: [
-                /* 1. Карточки видео (ленты, поиск, боковые панели) */
+               /* 1. Карточки видео (ленты, поиск, боковые панели) */
                 '.yt-lockup-metadata-view-model__avatar',
+                '.ytLockupMetadataViewModelAvatar',
+                '.yt-lockup-metadata-view-model-wiz__avatar',
+                'ytd-rich-grid-media #avatar-container',
                 'ytd-rich-grid-media #avatar-container',
                 'ytd-video-renderer #channel-thumbnail',
                 'ytd-compact-video-renderer #channel-thumbnail',
@@ -113,7 +116,12 @@
     // Связка: html[data-hide-id] selector { display: none !important; }
     const cssRules = CONFIG.map(item =>
         `html[data-hide-${item.id}] :is(${item.selector}) { display: none !important; }` // Защита составных селекторов через :is
-    ).join('\n');
+    ).join('\n') + `
+        /* Компенсирующий отступ слева для текста карточек при скрытых аватарах */
+        html[data-hide-channel-avatars] :is(yt-lockup-metadata-view-model, .yt-lockup-metadata-view-model, ytd-rich-grid-media #details) {
+            padding-left: 10px !important;
+        }
+    `;
 
     const style = document.createElement('style');
     style.id = 'yt-hider-styles';
