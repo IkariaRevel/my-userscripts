@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         YouTube: Отключение бесконечной ленты на главной
+// @name         YouTube: отключение бесконечной ленты на главной
 // @version      1.0
 // @description  Останавливает автоподгрузку видео при скролле главной страницы YouTube
 // @match        https://www.youtube.com/*
