@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTube: скрыть элементы интерфейса (выбор в настройках скрипта)
 // @namespace    local.yt.hider
-// @version      1.11
+// @version      1.12
 // @description  Модульное скрытие элементов YouTube через переключение data-атрибутов
 // @match        *://*.youtube.com/*
 // @run-at       document-start
@@ -46,8 +46,12 @@
                 /* 4. Лента с новой разметкой: просмотры на 1-й строке (не трогая автора) */
                 ':is([class*="metadata-row"], [class*="MetadataRow"]) > span:not(:first-child):has(+ :is([class*="delimiter"], [class*="Delimiter"]))',
 
-                /* 5. Значок-треугольник перед просмотрами */
-                ':is([class*="metadata-row"], [class*="MetadataRow"]) :is([class*="LeadingIcon"], [class*="leading-icon"])'
+                /* 5. Значок-треугольник перед просмотрами и число просмотров сразу за ним */
+                ':is([class*="metadata-row"], [class*="MetadataRow"]) :is([class*="LeadingIcon"], [class*="leading-icon"])',
+                ':is([class*="metadata-row"], [class*="MetadataRow"]) :is([class*="LeadingIcon"], [class*="leading-icon"]) + span',
+
+                /* 6. Страница истории: просмотры в конце строки метаданных (без даты) */
+                'ytd-browse[page-subtype="history"] :is([class*="metadata-row"], [class*="MetadataRow"]) :is([class*="last-part"], [class*="LastPart"]):not(:has(a))'
             ].join(', '),
             defaultState: true
         },
